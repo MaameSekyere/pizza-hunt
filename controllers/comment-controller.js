@@ -21,7 +21,8 @@ const commentController = {
       })
       .catch((err) => res.json(err));
   },
-  // remove comments
+
+  // remove comment
   removeComment({ params }, res) {
     Comment.findOneAndDelete({ _id: params.commentId })
       .then((deletedComment) => {
